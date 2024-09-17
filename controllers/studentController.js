@@ -7,7 +7,7 @@ async function addStudent(req, res) {
         console.log(req.body,'req.body');
         let student = new Student(req.body);
         await student.save();
-        res.json({ message: 'Student added successfully' });
+        
         res.end('done');
         
     } catch (error) {
